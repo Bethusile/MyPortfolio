@@ -33,5 +33,27 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  //NavBar Burger
+  // Get the navbar collapse element
+    const navbarCollapse = document.getElementById('navbarNav');
+
+    // Get all the nav links inside the navbar collapse
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+
+    // Add a click event listener to each nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if the navbar is currently visible (in mobile mode)
+            if (navbarCollapse.classList.contains('show')) {
+                // Get the Bootstrap collapse instance and hide it
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
+
   
   

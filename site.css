@@ -17,6 +17,7 @@
     z-index: 1000; /* Ensure the navbar stays above other elements */
 }
 
+
 /* Pink text for "usile" */
 .text-pink {
     color: #ff66b2 !important;
@@ -140,7 +141,7 @@ section {
 
 .card {
     border-radius: 10px;
-    border: 2px solid #ff69b4; /* Pink outline */
+    border: 5px solid #ff69b4; /* Pink outline */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--card-bg);
@@ -191,22 +192,29 @@ section {
 }
 
 .skills-list li {
-    background-color: #ff66b2; /* Pink background */
-    color: white; /* White text */
-    padding: 8px 12px; /* Reduced padding for compactness */
-    margin: 0; /* Removed margin between blocks */
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
-    font-size: 14px; /* Slightly smaller text */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Make it interactive */
-    border: 1px solid black; /* Pink outline */
+    background-color: transparent;  /* No background */
+    color: black;                   /* Default text color */
+    padding: 0 10px;                     /* No padding */
+    margin: 5px 0;                    /* No margin */
+    border-radius: 0;              /* No rounded corners */
+    box-shadow: none;              /* No shadow */
+    font-size: 16px;               /* Default size */
+    transition: none;              /* No transition effect */
+    cursor: default;               /* Default cursor */
+    border: none;                  /* No border */
+    list-style-type: none;         /* Optional: remove bullet */
+    
+}
+.skills-list i {
+    margin-right: 10px;
+    color: #333;
 }
 
 .skills-list li:hover {
-    background-color: #ff3385; /* Darker pink on hover */
+    background-color: #ff69b4; /* Darker pink on hover */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
     transform: scale(1.1); /* Slight zoom-in effect */
+    color: white;
 }
 
 /* Tech Badge */
@@ -258,5 +266,125 @@ section {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
+}
+
+.d-flex span {
+    font-size: 16px;
+    color: var(--pink-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+/*buttons*/
+.btn-gradient {
+  background: linear-gradient(135deg, #000000, #ff69b4); /* black to pink */
+  color: #ffffff !important;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 400;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.btn-outline-pink {
+    /* color: #ff69b4; Pink text color */
+    text-decoration: none;
+    background-color: white; /* Transparent background */
+}
+
+/*Projects styling*/
+.d-none {
+    display: none !important;
+  }
+
+  .tab-btn {
+    padding: 10px 20px;
+    margin: 0 8px;
+    cursor: pointer;
+    background: #eee;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+
+  .tab-btn.active,
+  .tab-btn:hover {
+    background: #007bff;
+    color: white;
+  }
+
+  @media (max-width: 767.98px) {
+    #fullstackCarousel .carousel-item .col-md-4:not(:first-child),
+    #cloudCarousel .carousel-item .col-md-4:not(:first-child),
+    #dataanalyticsCarousel .carousel-item .col-md-4:not(:first-child) {
+        display: none;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* Changes the default Bootstrap icon color to white */
+    filter: invert(100%);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(36%) sepia(85%) saturate(7186%) hue-rotate(314deg) brightness(97%) contrast(92%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  /* This pushes the button to the edge of the carousel container */
+  width: 0%; 
+  /* Add padding to the left and right to space it out */
+  padding: 0 15px; 
+  /* Use a background color with some transparency to make them stand out */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Use a circular background for a cleaner look */
+  border-radius: 50%;
+  /* Use flexbox to center the icon within the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Make sure the control is always above the content */
+  z-index: 10;
+}
+
+/* Adjust the position of the arrows slightly for better aesthetics */
+.carousel-control-prev {
+  left: -20px; 
+}
+
+.carousel-control-next {
+  right: -20px; 
+}
+/* make the arrow buttons interactive*/
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slide-right {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+.carousel-control-prev-icon {
+  filter: invert(36%) sepia(85%) saturate(7186%) hue-rotate(314deg) brightness(97%) contrast(92%);
+  animation: slide-left 2s infinite; /* Applies the animation */
+}
+
+.carousel-control-next-icon {
+  filter: invert(36%) sepia(85%) saturate(7186%) hue-rotate(314deg) brightness(97%) contrast(92%);
+  animation: slide-right 2s infinite; /* Applies the animation */
 }
 
