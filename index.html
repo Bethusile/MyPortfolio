@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 
 <head>
     <meta charset="UTF-8">
@@ -26,9 +27,13 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top py-3">
         <div class="container">
+                        
             <a class="navbar-brand" href="index.html">
                 <span class="text-white">Bet</span><span class="text-pink">husile</span>
             </a>
+            <button id="themeToggle" class="btn btn-sm btn-outline-pink" type="button" title="Toggle theme" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,9 +60,14 @@
                         <a class="nav-link" href="https://github.com/Bethusile" target="_blank" title="My GitHub Profile"><i
                                 class="fab fa-github text-pink"></i></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:s212280317@mandela.ac.za" title="Email Me" target="_blank" style="text-decoration: none;">
+                            <i class="fas fa-envelope text-pink" style="font-size: 1.5rem; transition: 0.3s;"></i>
+                        </a>
+                    </li>                    
                 </ul>
             </div>
- 
+            
 
         </div>
     </nav>
@@ -75,7 +85,7 @@
         <div class="container position-relative z-index-2">
             <h1 class="display-3">Bethusile Mafumana</h1>
             <p class="lead mt-3">Cloud Engineer | Project Manager</p>
-            <p class="lead mt-3"> Azure Cloud | C# | SQL Server | ASP.NET Core | Java | Android | Git
+            <p class="lead mt-3"> Azure Cloud | C# | SQL Server | ASP.NET Core | Java | Android | Git | Power BI
                 
         </p>
             <a href="#projects" class="btn btn-pink mt-4 text-white">Learn More</a>
@@ -135,7 +145,7 @@
                                                 <span><i class="fas fa-sync-alt"></i> TanStack Query</span>
                                             </div>
                                             <p><strong>Role:</strong> Scrum Master, Full-stack Developer</p>
-                                            <a href="https://github.com/Bethusile/Tasky-CRM-Dashboard-for-Contractors-Clients" class="btn btn-outline-pink mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
+                                            <a href="https://github.com/Bethusile/Tasky-CRM-Dashboard-for-Contractors-Clients" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
                                                 <i class="fab fa-github"></i>
                                             </a>
                                         </div>
@@ -165,7 +175,7 @@
                                                 <span><i class="fas fa-cloud-upload-alt"></i> Render (backend)</span>
                                             </div>
                                             <p><strong>Role:</strong> Front-end developer</p>
-                                            <a href="https://github.com/Bethusile/BBD-Laser-Tag-Game" class="btn btn-outline-pink mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
+                                            <a href="https://github.com/Bethusile/BBD-Laser-Tag-Game" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
                                                 <i class="fab fa-github"></i>
                                             </a>
                                         </div>
@@ -252,7 +262,7 @@
                                                 <span><i class="fab fa-github"></i> GitHub Actions (CI/CD)</span>
                                             </div>
                                             <p><strong>Role:</strong> Full-Stack Developer & DevOps Engineer</p>
-                                            <a href="https://github.com/Bethusile/Afro-Belle-E-Commerce" class="btn btn-outline-pink mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
+                                            <a href="https://github.com/Bethusile/Afro-Belle-E-Commerce" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
                                                 <i class="fab fa-github"></i>
                                             </a>
                                         </div>
@@ -303,7 +313,7 @@
                                                 <span><i class="fas fa-database"></i> Data Modeling</span>
                                             </div>
                                             <p><strong>Role:</strong> Data Analyst, Business Analyst</p>
-                                            <a href="https://github.com/Bethusile/London-Bike-Sharing-Analysis" class="btn btn-outline-pink mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
+                                            <a href="https://github.com/Bethusile/London-Bike-Sharing-Analysis" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
                                                 <i class="fab fa-github"></i>
                                             </a>
                                         </div>
@@ -411,7 +421,7 @@
                             alt="Azure Logo" style="height:40px; margin-right:8px;">
                         Microsoft Azure Fundamentals (AZ-900)
                     </h5>
-                        <p>Completed September 2025</p>
+                        <p>Completed 2025</p>
                     <hr>
                     <h5>
                         <img src="images/umuzi.png" 
@@ -487,8 +497,10 @@
             <div style="flex-basis: 33.33%; text-align: center;">
                 <p>&copy;2025 All rights reserved</p>
             </div>
-            <div style="flex-basis: 33.33%; text-align: right;">
-                <p>Email: <a href="mailto:s212280317@mandela.ac.za">s212280317@mandela.ac.za</a></p>
+            <div style="flex-basis: 33.33%; text-align: center;">
+                <a href="mailto:s212280317@mandela.ac.za" title="Email Me" target="_blank" style="text-decoration: none;">
+                    <i class="fas fa-envelope text-pink" style="font-size: 1.8rem; transition: 0.3s;"></i>
+                </a>
             </div>
         </div>
     </footer>
@@ -497,6 +509,40 @@
 <!-- My scripts like Bootstrap or EmailJS first -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  (function () {
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+
+    // apply saved theme on load
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      root.setAttribute('data-theme', saved);
+    }
+
+    // update toggle icon
+    function refreshIcon() {
+      if (!btn) return;
+      const isDark = (root.getAttribute('data-theme') || 'dark') === 'dark';
+      btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      btn.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+    }
+    refreshIcon();
+
+    // handle click
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        refreshIcon();
+      });
+    }
+  })();
+</script>
+
 
 <!-- My site.js file -->
 <script src="site.js"></script>

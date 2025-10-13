@@ -90,9 +90,29 @@ section {
     z-index: 2;
 }
 
-.hero-section h1 {
-    font-size: 3rem;
+/* Hero Name — Scripted Font */
+/* Hero Title — Freestyle Script style */
+/* Hero Title — Script MJ style (Elegant cursive signature) */
+/* Hero Title — Pristina Script Style */
+h1.display-3 {
+  font-family: "Pristina", "Monotype Corsiva", cursive !important;
+  font-weight: normal;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255, 105, 180, 0.6),
+    0 0 25px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
 }
+
+/* Optional: hover glow effect 
+h1.display-3:hover {
+  text-shadow:
+    0 0 12px rgba(255, 182, 193, 0.8),
+    0 0 25px rgba(255, 105, 180, 0.6);
+}*/
+
 
 .hero-section p {
     font-size: 1.5rem;
@@ -387,4 +407,216 @@ section {
   filter: invert(36%) sepia(85%) saturate(7186%) hue-rotate(314deg) brightness(97%) contrast(92%);
   animation: slide-right 2s infinite; /* Applies the animation */
 }
+
+/***********Dark mode************************/
+
+/* -------------------------------------------------
+   CONSTANT BRAND PINK (used in both themes)
+-------------------------------------------------- */
+:root { --pink: #ff69b4; }
+
+/* -------------------------------------------------
+   THEME TOGGLE BUTTON — same pink in both modes
+-------------------------------------------------- */
+#themeToggle,
+#themeToggle i {
+  color: var(--pink) !important;
+  border-color: var(--pink) !important;
+}
+#themeToggle:hover {
+  background: var(--pink) !important;
+  color: #111 !important;
+}
+
+/* -------------------------------------------------
+   DARK MODE: Transparent Magenta Glass Cards (no gradient)
+   Light mode remains untouched and white, exactly as in your screenshot
+-------------------------------------------------- */
+:root[data-theme="dark"] #projects .card,
+:root[data-theme="dark"] #my-journey .card,
+:root[data-theme="dark"] #about .card,
+:root[data-theme="dark"] .about-section .card {
+  background: rgba(255, 20, 147, 0.07);       /* transparent magenta tint */
+  border: 1px solid rgba(255, 105, 180, 0.4); /* pink edge */
+  border-radius: 14px;
+  color: #fff;
+  backdrop-filter: blur(24px) saturate(200%); /* real glass effect */
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  box-shadow:
+    0 2px 6px rgba(255, 105, 180, 0.15),
+    0 12px 40px rgba(0, 0, 0, 0.45);          /* soft glow with depth */
+  transition: all 0.3s ease;
+}
+
+/* Hover — lift slightly and brighten tint */
+:root[data-theme="dark"] #projects .card:hover,
+:root[data-theme="dark"] #my-journey .card:hover,
+:root[data-theme="dark"] #about .card:hover,
+:root[data-theme="dark"] .about-section .card:hover {
+  background: rgba(255, 20, 147, 0.12);       /* slightly brighter pink glass */
+  border-color: #ff69b4;
+  box-shadow:
+    0 4px 10px rgba(255, 105, 180, 0.25),
+    0 14px 50px rgba(255, 105, 180, 0.25);
+  transform: translateY(-6px);
+}
+
+/* Remove gradients or overlay layers if they existed */
+:root[data-theme="dark"] #projects .card::before,
+:root[data-theme="dark"] #my-journey .card::before,
+:root[data-theme="dark"] #about .card::before,
+:root[data-theme="dark"] .about-section .card::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Dark mode text colors for readability */
+:root[data-theme="dark"] #projects .card h5,
+:root[data-theme="dark"] #my-journey .card h5,
+:root[data-theme="dark"] #about .card h5,
+:root[data-theme="dark"] .about-section .card h5 {
+  color: #ffb6d9;
+  font-weight: 400;
+}
+:root[data-theme="dark"] #projects .card p,
+:root[data-theme="dark"] #my-journey .card p,
+:root[data-theme="dark"] #about .card p,
+:root[data-theme="dark"] .about-section .card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+:root[data-theme="dark"] #projects .card span,
+:root[data-theme="dark"] #my-journey .card span,
+:root[data-theme="dark"] #about .card span,
+:root[data-theme="dark"] .about-section .card span {
+  color: #ffb6d9;
+}
+
+/* Keep dark section backgrounds black for contrast */
+:root[data-theme="dark"] #projects,
+:root[data-theme="dark"] #my-journey {
+  background: #000 !important;
+}
+/* Always-on pink outline + glow for My Journey cards */
+:root[data-theme="dark"] #my-journey .card {
+  border-color: #ff69b4 !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 105, 180, 0.65),    /* crisp pink edge */
+    0 10px 34px rgba(255, 105, 180, 0.18),  /* soft pink glow */
+    0 12px 40px rgba(0, 0, 0, 0.45);        /* depth */
+}
+
+:root[data-theme="dark"] #my-journey .card:hover {
+  background: rgba(255, 20, 147, 0.12);
+  border-color: #ff69b4 !important;
+  box-shadow:
+    0 0 10px rgba(255, 105, 180, 0.4),       /* bright pink outer glow */
+    0 0 25px rgba(255, 105, 180, 0.3),
+    0 0 45px rgba(255, 105, 180, 0.25),
+    0 0 70px rgba(255, 105, 180, 0.2),
+    0 18px 50px rgba(0, 0, 0, 0.6);          /* depth and realism */
+  transform: translateY(-6px);
+  transition: all 0.35s ease;
+}
+
+
+/* Dark mode: GitHub buttons are black bg + white icon/text, no hover change */
+:root[data-theme="dark"] .btn-github {
+  /*background: #000 !important;*/
+  color: #fff !important;
+  box-shadow: none !important;
+}
+:root[data-theme="dark"] .btn-github .fa-github { color: #fff !important; }
+
+/* Neutralize hover so it doesn't change */
+:root[data-theme="dark"] .btn-github:hover,
+:root[data-theme="dark"] .btn-github:focus,
+:root[data-theme="dark"] .btn-github:active {
+  /*background: #000 !important;*/
+  color: #fff !important;
+  border-color: #ff69b4 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Featured Projects heading color for both themes */
+#projects .section-title {
+  color: #000 !important; /* stays black in light mode */
+}
+
+/* Switch to white in dark mode */
+:root[data-theme="dark"] #projects .section-title {
+  color: #fff !important;
+}
+
+
+/*****************dark mode cards***********************/
+
+/* Dark mode: About + Gallery sections should be dark */
+:root[data-theme="dark"] #about,
+:root[data-theme="dark"] .about-section,
+:root[data-theme="dark"] #gallery-cta {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Light mode: keep white (no black) */
+:root:not([data-theme="dark"]) #about,
+:root:not([data-theme="dark"]) .about-section,
+:root:not([data-theme="dark"]) #gallery-cta {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* If you have cards in About, give them the same magenta glass (dark mode) */
+:root[data-theme="dark"] #about .card,
+:root[data-theme="dark"] .about-section .card {
+  background: rgba(255, 20, 147, 0.08);
+  border: 1px solid rgba(255,105,180,0.4);
+  color:#fff;
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+}
+
+/* Light mode cards in About stay classic white */
+:root:not([data-theme="dark"]) #about .card,
+:root:not([data-theme="dark"]) .about-section .card {
+  background: #fff;
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+
+
+/***************About section icons******************/
+
+/* Dark mode: skill icons pink, skill text white */
+:root[data-theme="dark"] #about .skills-list i,
+:root[data-theme="dark"] .about-section .skills-list i {
+  color: #ff69b4 !important; /* bright pink icons */
+  transition: color 0.3s ease;
+}
+
+:root[data-theme="dark"] #about .skills-list li,
+:root[data-theme="dark"] .about-section .skills-list li {
+  color: #ffffff !important; /* white text */
+}
+
+/* Hover effect for icons (optional subtle glow) */
+:root[data-theme="dark"] #about .skills-list i:hover,
+:root[data-theme="dark"] .about-section .skills-list i:hover {
+  color: rgba(255,105,180,0.4) !important; /* softer pink on hover */
+}
+
+/* Light mode: restore normal black text and icon colors */
+:root:not([data-theme="dark"]) #about .skills-list i,
+:root:not([data-theme="dark"]) .about-section .skills-list i {
+  color: #000 !important;
+}
+
+:root:not([data-theme="dark"]) #about .skills-list li,
+:root:not([data-theme="dark"]) .about-section .skills-list li {
+  color: #000 !important;
+}
+
 
