@@ -9,6 +9,10 @@
     --card-bg: #ffffff;
     --border-color: #dee2e6;
 }
+@font-face {
+  font-family: "Pristina";
+  src: url("fonts/Pristina.ttf") format("truetype");
+}
 
 /* Sticky Navbar */
 .navbar.sticky-top {
