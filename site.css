@@ -204,6 +204,18 @@ h1.display-3:hover {
     .hero-section p {
         font-size: 1.2rem;
     }
+    h1.display-3 {
+  font-family: "Freestyle Script" !important;
+  src: url("fonts/FreestyleScript.ttf") format("truetype");
+  font-weight: normal;
+  font-size: 4.5rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255, 105, 180, 0.6),
+    0 0 25px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
+}
 }
 
 .skills-list {
@@ -428,8 +440,9 @@ h1.display-3:hover {
   border-color: var(--pink) !important;
 }
 #themeToggle:hover {
-  background: var(--pink) !important;
+  /*background: var(--pink) !important;*/
   color: #111 !important;
+  border-color: white !important;
 }
 
 /* -------------------------------------------------
@@ -623,4 +636,108 @@ h1.display-3:hover {
   color: #000 !important;
 }
 
+/**********************************Burger**********************************/
+
+/* -------------------------
+  Animated Hamburger → X
+  Responsive + Bootstrap-friendly
+--------------------------*/
+
+/* Toggler container styling (size + spacing) */
+.navbar-toggler.animated-toggler {
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,105,180,0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+/* The three-bar icon visual */
+.animated-icon {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: var(--pink);
+  transition: background .35s ease, transform .35s ease;
+}
+.animated-icon::before,
+.animated-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--pink);
+  transition: transform .35s ease, top .35s ease, opacity .35s ease;
+}
+.animated-icon::before { top: -7px; }
+.animated-icon::after  { top: 7px; }
+
+/* When opened (Bootstrap removes .collapsed), turn into X */
+.navbar-toggler.animated-toggler:not(.collapsed) .animated-icon {
+  background: transparent;
+}
+.navbar-toggler.animated-toggler:not(.collapsed) .animated-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.navbar-toggler.animated-toggler:not(.collapsed) .animated-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Slight hover/focus polish for the button container, but not for color fill */
+.navbar-toggler.animated-toggler:hover,
+.navbar-toggler.animated-toggler:focus {
+  border-color: rgba(255,105,180,0.18);
+  background: rgba(255,105,180,0.02);
+  outline: none;
+  box-shadow: none;
+}
+
+/* Remove the default Bootstrap SVG icon behavior in case it was used elsewhere */
+.navbar-toggler .navbar-toggler-icon {
+  background-image: none !important;
+}
+
+/* Keep everything accessible: big hit area on mobile */
+@media (max-width: 991.98px) {
+  .navbar-toggler.animated-toggler { margin-left: .5rem; }
+}
+
+/* -------------------------
+  Theme Toggle: remove hover/focus effects (keeps pink icon but no fill)
+--------------------------*/
+#themeToggle {
+  border-color: var(--pink) !important;
+  color: var(--pink) !important;
+  background: transparent !important;
+  transition: none !important;
+}
+#themeToggle:hover,
+#themeToggle:focus,
+#themeToggle:active {
+  background: transparent !important;
+  color: var(--pink) !important;
+  border-color: var(--pink) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+#themeToggle:focus { outline: none !important; }
+
+/* If you used .btn-outline-pink styling, keep it intact elsewhere */
+.btn-outline-pink { border-color: var(--pink) !important; color: var(--pink) !important; }
+
+/* Optional: make the toggler icon pink in dark & light (consistent) */
+.animated-icon,
+.animated-icon::before,
+.animated-icon::after {
+  background: var(--pink);
+}
 

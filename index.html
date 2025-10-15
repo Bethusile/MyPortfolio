@@ -33,11 +33,14 @@
             </a>
             <button id="themeToggle" class="btn btn-sm btn-outline-pink" type="button" title="Toggle theme" aria-label="Toggle theme">
                             <i class="fas fa-moon"></i>
-                        </button>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Animated hamburger (keeps bootstrap collapse behaviour) -->
+            <button class="navbar-toggler animated-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="animated-icon" aria-hidden="true"></span>
+            </button>
+
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -66,8 +69,7 @@
                         </a>
                     </li>                    
                 </ul>
-            </div>
-            
+            </div>           
 
         </div>
     </nav>
@@ -421,7 +423,7 @@
                             alt="Azure Logo" style="height:40px; margin-right:8px;">
                         Microsoft Azure Fundamentals (AZ-900)
                     </h5>
-                        <p>Completed 2025</p>
+                        <p>Expected November 2025</p>
                     <hr>
                     <h5>
                         <img src="images/umuzi.png" 
@@ -547,6 +549,75 @@
       });
     }
   })();
+
+  //Navbar toggle hover
+
+// AUTO DROPDOWN ON BURGER HOVER ONLY (collapsed mode)
+(function () {
+  if (!window.bootstrap) return; // make sure bootstrap.bundle is loaded
+  const collapseEl = document.getElementById('navbarNav');
+  const toggler = document.querySelector('.navbar-toggler');
+
+  if (!collapseEl || !toggler) return;
+
+  const bsCollapse = new bootstrap.Collapse(collapseEl, { toggle: false });
+
+  const isCollapsedLayout = () =>
+    window.getComputedStyle(toggler).display !== 'none';
+
+  let hideTimeout = null;
+
+  // Show menu when hovering over burger
+  toggler.addEventListener('mouseenter', () => {
+    if (!isCollapsedLayout()) return;
+    if (hideTimeout) clearTimeout(hideTimeout);
+    if (!collapseEl.classList.contains('show')) {
+      bsCollapse.show();
+      toggler.classList.remove('collapsed');
+      toggler.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Hide menu when mouse leaves burger area
+  toggler.addEventListener('mouseleave', () => {
+    if (!isCollapsedLayout()) return;
+    if (hideTimeout) clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+      if (collapseEl.classList.contains('show')) {
+        bsCollapse.hide();
+        toggler.classList.add('collapsed');
+        toggler.setAttribute('aria-expanded', 'false');
+      }
+      hideTimeout = null;
+    }, 150);
+  });
+
+  // Also close menu when user leaves the opened menu area itself
+  collapseEl.addEventListener('mouseleave', () => {
+    if (!isCollapsedLayout()) return;
+    if (hideTimeout) clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+      if (collapseEl.classList.contains('show')) {
+        bsCollapse.hide();
+        toggler.classList.add('collapsed');
+        toggler.setAttribute('aria-expanded', 'false');
+      }
+      hideTimeout = null;
+    }, 150);
+  });
+
+  // Clean up when window resizes to desktop
+  window.addEventListener('resize', () => {
+    if (!isCollapsedLayout() && collapseEl.classList.contains('show')) {
+      bsCollapse.hide();
+      toggler.classList.add('collapsed');
+      toggler.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+
+
 </script>
 
 
