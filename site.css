@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Pristina";
+  src: url("fonts/Pristina.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Freestyle Script";
+  src: url("fonts/FreestyleScript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Root color variables */
 :root {
     --pink-primary: #ff6b9e;
@@ -9,16 +20,7 @@
     --card-bg: #ffffff;
     --border-color: #dee2e6;
 }
-@font-face {
-  font-family: "Pristina";
-  src: url("fonts/Pristina.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Freestyle Script";
-  src: url("fonts/FreestyleScript.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 
 /* Sticky Navbar */
