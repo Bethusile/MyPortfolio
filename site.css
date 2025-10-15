@@ -1,25 +1,25 @@
-@font-face {
+/* Pristina - add woff2/woff if you have them; keep ttf as fallback */
+@font-face{
   font-family: "Pristina";
-  src: url("fonts/Pristina.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Freestyle Script";
-  src: url("fonts/FreestyleScript.ttf") format("truetype");
+  src: url("fonts/Pristina.woff2") format("woff2"),
+       url("fonts/Pristina.woff") format("woff"),
+       url("fonts/Pristina.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-/* Root color variables */
-:root {
-    --pink-primary: #ff6b9e;
-    --pink-secondary: #ffd3e1;
-    --dark-bg: #1a1a1a;
-    --light-bg: #f8f9fa;
-    --dark-text: #212529;
-    --light-text: #f8f9fa;
-    --card-bg: #ffffff;
-    --border-color: #dee2e6;
+/* Freestyle Script */
+@font-face{
+  font-family: "Freestyle Script";
+  src: url("fonts/FreestyleScript.woff2") format("woff2"),
+       url("fonts/FreestyleScript.woff") format("woff"),
+       url("fonts/FreestyleScript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 
 
 
