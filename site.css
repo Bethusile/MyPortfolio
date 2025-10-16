@@ -201,7 +201,7 @@ h1.display-3:hover {
 
 .btn-outline-pink:hover {
     background-color: var(--pink-primary);
-    color: white;
+    /*color: white;*/
 }
 
 /* Responsive Adjustments */
@@ -343,7 +343,7 @@ h1.display-3:hover {
 .btn-outline-pink {
     /* color: #ff69b4; Pink text color */
     text-decoration: none;
-    background-color: white; /* Transparent background */
+    /*background-color: white;  Transparent background */
 }
 
 /*Projects styling*/
