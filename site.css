@@ -108,7 +108,7 @@ section {
 /* Hero Title — Script MJ style (Elegant cursive signature) */
 /* Hero Title — Pristina Script Style */
 h1.display-3 {
-  font-family: "Pristina", "Monotype Corsiva", cursive !important;
+  font-family: "Pristina", "Monotype Corsiva" !important;
   font-weight: normal;
   font-size: 5rem;
   letter-spacing: 1px;
@@ -215,7 +215,7 @@ h1.display-3:hover {
   }
 
   h1.display-3 {
-    font-family: "Freestyle Script", cursive !important;
+    font-family: "Freestyle Script" !important;
     font-weight: normal;
     font-size: 2.5rem;
     letter-spacing: 1px;
@@ -638,7 +638,7 @@ h1.display-3:hover {
 /* Light mode: restore normal black text and icon colors */
 :root:not([data-theme="dark"]) #about .skills-list i,
 :root:not([data-theme="dark"]) .about-section .skills-list i {
-  color: #000 !important;
+  color: #ff69b4 !important; /* bright pink icons */
 }
 
 :root:not([data-theme="dark"]) #about .skills-list li,
