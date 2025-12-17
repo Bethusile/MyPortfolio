@@ -113,13 +113,48 @@
                 <button class="nav-link text-pink" id="dataanalytics-tab" data-bs-toggle="tab" data-bs-target="#dataanalytics" type="button" role="tab" aria-controls="dataanalytics" aria-selected="false">Data Analytics</button>
             </li>
         </ul>
-
+        <!-- Full stack -->
         <div class="tab-content" id="projectsTabContent">
             <div class="tab-pane fade" id="fullstack" role="tabpanel" aria-labelledby="fullstack-tab">
                 <div id="fullstackCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <!-- Project 1 -->
                         <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 mb-4">                                    
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                        <a href="https://github.com/Bethusile/TuckShop" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
+                                            <div class="card">
+                                                <img src="images/tuckshop.png" class="card-img-top" alt="Tasky Project" style="height: 400px; object-fit: cover;">
+                                            </div>
+                                        </a>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Tuckshop Stock Manager</h5>
+                                            <p class="card-text">
+                                                TuckShop is a retail solution that automates inventory management and sales processing. 
+                                                I engineered the system to handle complex stock movements and integrated a financial tracking module
+                                                that manages returns through reversible operations rather than simple deletions. The application 
+                                                provides daily revenue metrics and on-demand PDF reporting to facilitate data-informed business decisions.
+
+                                            </p>
+                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
+                                                <span><i class="fas fa-code"></i> TypeScript</span>
+                                                <span><i class="fab fa-react"></i> React</span>
+                                                <span><i class="fas fa-server"></i> Node.js</span>
+                                                <span><i class="fas fa-database"></i> PostgreSQL</span>
+                                                <span><i class="fab fa-css3-alt"></i> Material UI</span>
+                                            </div>
+                                            <p><strong>Role:</strong> Full-stack Developer</p>
+                                            <a href="https://github.com/Bethusile/TuckShop" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- Project 2 -->
+                        <div class="carousel-item">
                             <div class="row justify-content-center">
                                 <div class="col-md-7 mb-4">                                    
                                     <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
@@ -149,7 +184,7 @@
                                 </div>
                             </div>
                         </div> 
-                        <!-- Project 2 -->
+                        <!-- Project 3 -->
                         <div class="carousel-item">
                             <div class="row justify-content-center">
                                 <div class="col-md-7 mb-4">
@@ -179,10 +214,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Project 3 
+                        <!-- Project  
                          *********************************-->
                         
-                        <!-- Project 4 -->
+                        <!-- Project  -->
                         <!--******************************-->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#fullstackCarousel" data-bs-slide="prev">
@@ -198,7 +233,7 @@
                     <a href="https://github.com/Bethusile" class="btn-gradient">View More Projects on GitHub</a>
                 </div>
             </div>
-
+            <!-- Cloud -->
             <div class="tab-pane fade show active" id="cloud" role="tabpanel" aria-labelledby="cloud-tab">
                 <div id="cloudCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -280,7 +315,7 @@
                     <a href="https://github.com/Bethusile" class="btn-gradient">View More Projects on GitHub</a>
                 </div>
             </div>
-
+            <!-- Data Analytics -->
             <div class="tab-pane fade" id="dataanalytics" role="tabpanel" aria-labelledby="dataanalytics-tab">
                 <div id="dataanalyticsCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
