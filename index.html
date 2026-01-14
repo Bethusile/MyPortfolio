@@ -98,34 +98,148 @@
 <!-- Projects Section with Tabs -->
 <section id="projects" class="py-5 bg-light">
     <br /><br /><br /><br />
-    <div class="container">
+    
         <h2 class="section-title text-center text-black">Featured Projects</h2>
         <br />
 
         <ul class="nav nav-tabs justify-content-center mb-4" id="projectsTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-pink" id="fullstack-tab" data-bs-toggle="tab" data-bs-target="#fullstack" type="button" role="tab" aria-controls="fullstack" aria-selected="false">Full-Stack</button>
+                <button class="nav-link text-pink" id="fullstack-tab" data-bs-toggle="tab" data-bs-target="#fullstack" type="button" role="tab" aria-controls="fullstack" aria-selected="false">ASP.NET C#</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link active text-pink" id="cloud-tab" data-bs-toggle="tab" data-bs-target="#cloud" type="button" role="tab" aria-controls="cloud" aria-selected="true">Cloud</button>
+                <button class="nav-link active text-pink" id="cloud-tab" data-bs-toggle="tab" data-bs-target="#cloud" type="button" role="tab" aria-controls="cloud" aria-selected="true">TypeScript</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-pink" id="dataanalytics-tab" data-bs-toggle="tab" data-bs-target="#dataanalytics" type="button" role="tab" aria-controls="dataanalytics" aria-selected="false">Data Analytics</button>
+                <button class="nav-link text-pink" id="dataanalytics-tab" data-bs-toggle="tab" data-bs-target="#dataanalytics" type="button" role="tab" aria-controls="dataanalytics" aria-selected="false">Power BI</button>
             </li>
         </ul>
-        <!-- Full stack -->
+        <!-- C# -->
         <div class="tab-content" id="projectsTabContent">
             <div class="tab-pane fade" id="fullstack" role="tabpanel" aria-labelledby="fullstack-tab">
                 <div id="fullstackCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Project 1 -->
+                        <!-- Project 1  -->
                         <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 mb-4">
+                                    
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                        <a href="https://github.com/Thango25/ProjectBB" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
+                                            <div class="card">
+                                                <img src="images/Lostandfound.png" class="card-img-top" alt="Lost & Found Project">
+                                            </div>
+                                        </a>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Lost & Found Application</h5>
+                                            <p class="card-text">
+                                                An ongoing cloud-hosted web application designed to help users report and recover lost and found items efficiently.
+                                                Leveraging the robust Microsoft Azure platform, this project utilizes ASP.NET Core for its backend logic and Azure SQL Database for scalable data storage.
+                                                The entire development lifecycle, including building and deployment, is automated through GitHub Actions, ensuring continuous integration and seamless updates.
+                                            </p>
+                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
+                                                <span><i class="fab fa-microsoft"></i> ASP.NET Core</span>
+                                                <span><i class="fas fa-code"></i> C#</span>
+                                                <span><i class="fas fa-database"></i> Azure SQL Database</span>
+                                                <span><i class="fas fa-cloud-upload-alt"></i> Azure App Service</span>
+                                                <span><i class="fab fa-github"></i> GitHub Actions (CI/CD)</span>
+                                            </div>
+                                            <p><strong>Role:</strong> Project Lead, Scrum Master, Full-stack Developer, DevOps Engineer</p>
+                                            <a href="https://github.com/Thango25/ProjectBB" class="btn btn-outline-pink mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 mb-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                        <a href="https://afrobelle-ejgpaxgebdfmh4ha.southafricanorth-01.azurewebsites.net/" target="_blank" title="View live demo - refresh the page" style="text-decoration: none; color: inherit;">
+                                            <img src="images/ab1.JPG" class="card-img-top" alt="Afro-Belle E-Commerce Web App" >
+                                        </a>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Afro-Belle E-Commerce Web App</h5>
+                                            <p class="card-text">Afrobelle is a Full-stack, custom-built e-commerce platform designed to empower small business owners to easily manage their online store.
+                                                 Built using ASP.NET Core MVC, handling user authentication, payment simulation, and admin workflows. 
+                                                Deployed on Azure App Service with a continuous integration and deployment (CI/CD) pipeline using GitHub Actions.</p>
+                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
+                                                <span><i class="fas fa-layer-group"></i> ASP.NET Core MVC</span>
+                                                <span><i class="fas fa-code"></i> C#</span>
+                                                <span><i class="fas fa-database"></i> SQL Server</span>
+                                                <span><i class="fas fa-project-diagram"></i> Entity Framework</span>
+                                                <span><i class="fas fa-cloud-upload-alt"></i> Azure App Service</span>
+                                                <span><i class="fab fa-github"></i> GitHub Actions (CI/CD)</span>
+                                            </div>
+                                            <p><strong>Role:</strong> Full-Stack Developer & DevOps Engineer</p>
+                                            <a href="https://github.com/Bethusile/Afro-Belle-E-Commerce" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#fullstackCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#fullstackCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="https://github.com/Bethusile" class="btn-gradient">View More Projects on GitHub</a>
+                </div>
+            </div>
+            <!-- TypeScript -->
+            <div class="tab-pane fade show active" id="cloud" role="tabpanel" aria-labelledby="cloud-tab">
+                <div id="cloudCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Project 1 
+                         *********************************-->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 mb-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                        <a href="https://github.com/Bethusile/Marketing-Campaign-Manager" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
+                                            <img src="images/bbd-marketing.png" class="card-img-top" alt="AR web app" >
+                                        </a>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">BBD Marketing Campaign Manager</h5>
+                                            <p class="card-text">
+                                                A web-based Augmented Reality marketing platform that allows users to scan print ads to reveal hidden content. Built with React, Node.js, and MindAR for interactive AR experiences.
+                                            </p>
+                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
+                                                <span><i class="fab fa-react"></i> React</span>
+                                                <span><i class="fab fa-node-js"></i> Node.js</span>
+                                                <span><i class="fas fa-eye"></i> MindAR (AR tracking)</span>
+                                                <span><i class="fas fa-database"></i> PostgreSQL</span>
+                                                <span><i class="fas fa-code"></i> TypeScript</span>
+                                            </div>
+                                            <p><strong>Role:</strong> Full stack developer</p>
+                                            <a href="https://github.com/Bethusile/Marketing-Campaign-Manager" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>c:\Users\bbdnet3411\OneDrive - Nelson Mandela University\Pictures\Screenshots\tuckshop3.png
+                        <!-- Project 2 -->
+                        <div class="carousel-item">
                             <div class="row justify-content-center">
                                 <div class="col-md-7 mb-4">                                    
                                     <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
                                         <a href="https://github.com/Bethusile/TuckShop" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
                                             <div class="card">
-                                                <img src="images/tuckshop.png" class="card-img-top" alt="Tasky Project" style="height: 400px; object-fit: cover;">
+                                                <img src="images/tuckshop3.png" class="card-img-top" alt="Tasky Project" >
                                             </div>
                                         </a>
                                         <div class="card-body text-center">
@@ -153,44 +267,14 @@
                                 </div>
                             </div>
                         </div> 
-                        <!-- Project 2 -->
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-md-7 mb-4">                                    
-                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
-                                        <a href="https://bethusile.github.io/calculator/" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
-                                            <div class="card">
-                                                <img src="images/calculator.png" class="card-img-top" alt="Tasky Project" style="height: 400px; object-fit: cover;">
-                                            </div>
-                                        </a>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Scientific Calculator</h5>
-                                            <p class="card-text">
-                                                A web-based scientific calculator built using TypeScript, HTML, and CSS,
-                                                supporting both basic and scientific mathematical operations.
-                                            </p>
-                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
-                                                <span><i class="fas fa-code"></i> TypeScript</span>
-                                                <span><i class="fab fa-html5"></i> HTML</span>
-                                                <span><i class="fab fa-css3-alt"></i> CSS</span>
-                                                <span><i class="fas fa-cloud-upload-alt"></i> Github pages</span>
-                                            </div>
-                                            <p><strong>Role:</strong> Full-stack Developer</p>
-                                            <a href="https://github.com/Bethusile/calculator" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
+                        
                         <!-- Project 3 -->
                         <div class="carousel-item">
                             <div class="row justify-content-center">
                                 <div class="col-md-7 mb-4">
                                     <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
                                         <a href="https://bbd-laser-tag-game.vercel.app/" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
-                                            <img src="images/lasertag.png" class="card-img-top" alt="Lasertag Web Game" style="height: 400px; object-fit: cover;">
+                                            <img src="images/lasertag.png" class="card-img-top" alt="Lasertag Web Game" >
                                         </a>
                                         <div class="card-body text-center">
                                             <h5 class="card-title">Lasertag Web Game</h5>
@@ -207,93 +291,6 @@
                                             </div>
                                             <p><strong>Role:</strong> Front-end developer</p>
                                             <a href="https://github.com/Bethusile/BBD-Laser-Tag-Game" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project  
-                         *********************************-->
-                        
-                        <!-- Project  -->
-                        <!--******************************-->
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#fullstackCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#fullstackCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <div class="text-center mt-3">
-                    <a href="https://github.com/Bethusile" class="btn-gradient">View More Projects on GitHub</a>
-                </div>
-            </div>
-            <!-- Cloud -->
-            <div class="tab-pane fade show active" id="cloud" role="tabpanel" aria-labelledby="cloud-tab">
-                <div id="cloudCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <!-- Project 1 
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-md-7 mb-4">
-                                    
-                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
-                                        <a href="https://lostandfound-d4eugreyhra3g8gn.southafricanorth-01.azurewebsites.net/" target="_blank" title="View live demo" style="text-decoration: none; color: inherit;">
-                                            <div class="card">
-                                                <img src="images/Lostandfound.png" class="card-img-top" alt="Lost & Found Project">
-                                            </div>
-                                        </a>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Lost & Found Application</h5>
-                                            <p class="card-text">
-                                                An ongoing cloud-hosted web application designed to help users report and recover lost and found items efficiently.
-                                                Leveraging the robust Microsoft Azure platform, this project utilizes ASP.NET Core for its backend logic and Azure SQL Database for scalable data storage.
-                                                The entire development lifecycle, including building and deployment, is automated through GitHub Actions, ensuring continuous integration and seamless updates.
-                                            </p>
-                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
-                                                <span><i class="fab fa-microsoft"></i> ASP.NET Core</span>
-                                                <span><i class="fas fa-code"></i> C#</span>
-                                                <span><i class="fas fa-database"></i> Azure SQL Database</span>
-                                                <span><i class="fas fa-cloud-upload-alt"></i> Azure App Service</span>
-                                                <span><i class="fab fa-github"></i> GitHub Actions (CI/CD)</span>
-                                            </div>
-                                            <p><strong>Role:</strong> Project Lead, Scrum Master, Full-stack Developer, DevOps Engineer</p>
-                                            <a href="https://github.com/Thango25/ProjectBB" class="btn btn-outline-pink mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Project 3 -->
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-md-7 mb-4">
-                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal1">
-                                        <a href="https://afrobelle-ejgpaxgebdfmh4ha.southafricanorth-01.azurewebsites.net/" target="_blank" title="View live demo - refresh the page" style="text-decoration: none; color: inherit;">
-                                            <img src="images/ab1.JPG" class="card-img-top" alt="Lasertag Web Game">
-                                        </a>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Afro-Belle E-Commerce Web App</h5>
-                                            <p class="card-text">Afrobelle is a Full-stack, custom-built e-commerce platform designed to empower small business owners to easily manage their online store.
-                                                 Built using ASP.NET Core MVC, handling user authentication, payment simulation, and admin workflows. 
-                                                Deployed on Azure App Service with a continuous integration and deployment (CI/CD) pipeline using GitHub Actions.</p>
-                                            <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
-                                                <span><i class="fas fa-layer-group"></i> ASP.NET Core MVC</span>
-                                                <span><i class="fas fa-code"></i> C#</span>
-                                                <span><i class="fas fa-database"></i> SQL Server</span>
-                                                <span><i class="fas fa-project-diagram"></i> Entity Framework</span>
-                                                <span><i class="fas fa-cloud-upload-alt"></i> Azure App Service</span>
-                                                <span><i class="fab fa-github"></i> GitHub Actions (CI/CD)</span>
-                                            </div>
-                                            <p><strong>Role:</strong> Full-Stack Developer & DevOps Engineer</p>
-                                            <a href="https://github.com/Bethusile/Afro-Belle-E-Commerce" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;">
                                                 <i class="fab fa-github"></i>
                                             </a>
                                         </div>
@@ -402,7 +399,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 </section>
 
 
