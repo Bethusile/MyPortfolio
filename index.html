@@ -86,7 +86,7 @@
         <!-- Content -->
         <div class="container position-relative z-index-2">
             <h1 class="display-3">Bethusile Mafumana</h1>
-            <p class="lead mt-3">Software Developer | Cloud Engineer | Project Manager</p>
+            <p class="lead mt-3">Software Developer | Data Engineer | Project Manager</p>
             <p class="lead mt-3"> SQL | Power BI | React | Typescript | Visio | ASP.NET C# | Java | Android | Azure 
                 
         </p>
@@ -103,18 +103,81 @@
         <br />
 
         <ul class="nav nav-tabs justify-content-center mb-4" id="projectsTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-pink" id="fullstack-tab" data-bs-toggle="tab" data-bs-target="#fullstack" type="button" role="tab" aria-controls="fullstack" aria-selected="false">ASP.NET C#</button>
-            </li>
+            
             <li class="nav-item" role="presentation">
                 <button class="nav-link active text-pink" id="cloud-tab" data-bs-toggle="tab" data-bs-target="#cloud" type="button" role="tab" aria-controls="cloud" aria-selected="true">TypeScript</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-pink" id="dataanalytics-tab" data-bs-toggle="tab" data-bs-target="#dataanalytics" type="button" role="tab" aria-controls="dataanalytics" aria-selected="false">Power BI</button>
+                 <button class="nav-link text-pink" id="dataengineering-tab" data-bs-toggle="tab" data-bs-target="#dataengineering" type="button" role="tab" aria-controls="dataengineering" aria-selected="false">Microsoft Fabric</button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-pink" id="fullstack-tab" data-bs-toggle="tab" data-bs-target="#fullstack" type="button" role="tab" aria-controls="fullstack" aria-selected="false">ASP.NET C#</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-pink" id="dataanalytics-tab" data-bs-toggle="tab" data-bs-target="#dataanalytics" type="button" role="tab" aria-controls="dataanalytics" aria-selected="false">Power BI</button>
+            </li>            
         </ul>
-        <!-- C# -->
+
+        <!-- Project Tabs -->
         <div class="tab-content" id="projectsTabContent">
+
+            <!-- Fabrics - data engineering -->
+            <div class="tab-pane fade show" id="dataengineering" role="tabpanel">
+                <div id="dataengineeringCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Project 1 -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 mb-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                        <a href="https://github.com/Bethusile/Fabric-Data-Engineering-Project" target="_blank" title="View github repo" style="text-decoration: none; color: inherit;">
+                                            <div class="card">
+                                                <img src="images/pipeline.png" class="card-img-top" alt="Fabric" >
+                                            </div>
+                                        </a>
+                                        <div class="card-body text-center">
+                                                <h5 class="card-title">Automated Sales ETL Pipeline</h5>
+                                                <p class="card-text">
+                                                    Developed a PySpark pipeline in Microsoft Fabric to automate the ingestion of retail sales data. 
+                                                    The system handles schema enforcement, transforms order dates into temporal features (Year/Month), and splits customer metadata for granular analysis.
+                                                    Transformed data is persisted into a Lakehouse using Delta Lake format for ACID-compliant storage.
+                                                </p>
+                                                <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
+                                                    <span><i class="fab fa-python"></i> PySpark</span>
+                                                    <span><i class="fas fa-database"></i> Delta Lake</span>
+                                                    <span><i class="fas fa-cloud"></i> Microsoft Fabric</span>
+                                                    <span><i class="fas fa-table"></i> Lakehouse Architecture</span>
+                                                    <span><i class="fas fa-file-csv"></i> CSV Ingestion</span>
+                                                </div>
+                                                <p><strong>Role:</strong> Data Engineer</p>
+                                            <a href="https://github.com/Bethusile/Fabric-Data-Engineering-Project" class="btn btn-outline-pink btn-github mt-3" target="_blank" title="GitHub project link" style="font-size: 2.5rem;" onclick="event.stopPropagation();">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- Project 2 -->
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#dataanalyticsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#dataanalyticsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="https://github.com/Bethusile" class="btn-gradient">View More Projects on GitHub</a>
+                </div>
+            </div> 
+
+            <!-- C# -->        
             <div class="tab-pane fade" id="fullstack" role="tabpanel" aria-labelledby="fullstack-tab">
                 <div id="fullstackCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -312,6 +375,7 @@
                     <a href="https://github.com/Bethusile" class="btn-gradient">View More Projects on GitHub</a>
                 </div>
             </div>
+
             <!-- Data Analytics -->
             <div class="tab-pane fade" id="dataanalytics" role="tabpanel" aria-labelledby="dataanalytics-tab">
                 <div id="dataanalyticsCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -489,7 +553,7 @@
                     </h5>
                         <p>Expected March 2026 </p>
                     <hr>                                             
-                    
+                    <!-- DA -->
                     <h5>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" style="height:25px; margin-right:8px;">
                         Data Analytics Certification
@@ -498,7 +562,18 @@
                         <a href="https://www.coursera.org/account/accomplishments/professional-cert/FU6TGZYHKWAH?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" 
                         class="btn-outline-pink">View Certificate</a>
                     </p> 
-                    
+                    <hr>
+                    <!-- DP700 -->
+                    <h5>
+                        <img src="images/Microsoft Azure Portal_logo.png" alt="MS Logo" style="height:25px; margin-right:8px;">
+                        DP-700 Candidate
+                    </h5>
+                    <p>Present</p>
+                    <ul>
+                        <li>Developing cloud-scale data solutions using Microsoft Fabric and Azure Synapse.</li>
+                        <li>Applying BCom Accounting expertise to build accurate financial data models.</li>
+                        <li>Preparing for Microsoft Certified: Azure Data Engineer Associate (DP-700).</li>
+                    </ul>
                     
                 </div>
 
